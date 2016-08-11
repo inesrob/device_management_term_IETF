@@ -161,11 +161,15 @@ TODO Add further explanation of the figure.
 Example: In a RPL-network, we have three types of devices:
 
 6LN(6LoWPAN Node): Defined in {{RFC6775}} as "A 6LoWPAN node is any host or router participating in a LoWPAN. This term is used when referring to situations in which either a host or router can play the role described." In Figure 2 is a leaf in the topology, it could be a constrained device without capability of forwarding, only with sensors/actuators. In this case, would it apply DM?
+
 6LR (6LoWPAN Router):  Defined in {{RFC6775}} as "An intermediate router in the LoWPAN that is able to send and receive Router Advertisements (RAs) and Router Solicitations (RSs) as well as forward and route IPv6 packets.  6LoWPAN routers are present only in route-over topologies." In this case, would it apply to RtM?
+
 6LBR (6LoWPAN Border Router):  Defined in {{RFC6775}} as "A border router located at the junction of separate 6LoWPAN networks or between a 6LoWPAN network and another IP network. There may be one or more 6LBRs at the 6LoWPAN network boundary.  A 6LBR is the responsible authority for IPv6 prefix propagation for the 6LoWPAN network it is serving.  An isolated LoWPAN also contains a 6LBR in the network, which provides the prefix(es) for the isolated network." In this case, would it apply to GtM?
 
-NM would include the RPL-Domain.
-    ~~~~
+NM would include the RPL-Domain. {{fig_ExampleDevMgtDescrp}}
+
+~~~~
+
                             +-------------------+
                             |                   |
                             |  Internet         |
@@ -198,7 +202,6 @@ NM? |                |                          |
     |  6LN   |      |        |                       |        |    |DM?
     |        |      | 6LN    |                       | 6LN    |    |
     +--------+      +--------+                       +--------+    |
-
 
 ~~~~
 {: #fig_ExampleDevMgtDescrp title='Example of areas of Management in RPL-network.'}
