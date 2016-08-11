@@ -28,28 +28,18 @@ author:
   country: Finland
   email: maria.ines.robles@ericsson.com
 - ins: M. E. Ersue
-  name: Mehmet E. Ersue
+  name: Mehmet
   org: Nokia Networks
   abbrev: Nokia
   email: mehmet.ersue@nokia.com
--
-  ins: C. Bormann
-  name: Carsten Bormann
+- ins: C. B. Carsten
+  name: Bormann
   org: Universitaet Bremen TZI
-  # abbrev: TZI
-  # street:
-  # - Postfach 330440
-  # - Bibliothekstr. 1
-  street: Postfach 330440
-  city: Bremen
-  code: D-28359
-  country: Germany
-  phone: +49-421-218-63921
+  abbrev: TZI
   email: cabo@tzi.org
-# normative:
-#  RFC2119:
+normative:
+  RFC2119:
 informative:
-  RFC6632:
   RFC7228:
   RFC7547:
   RFC7548:
@@ -73,20 +63,19 @@ in constrained environments.
 This document tries to define the main aspects related to management of constrained
 nodes/devices.
 
-{{RFC7547}} describes the problem statements and requirements in the management of Networks
+ {{RFC7547}} describes the problem statements and requirements in the management of Networks
 with constrained devices. {{RFC7548}} describes the use cases involving the management of networks in which constrained
 devices are involved.
 
 
 # Terminology and Requirements Language
 
-<!-- The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", -->
-<!-- "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this -->
-<!-- document are to be interpreted as described -->
-<!-- in [RFC 2119](#RFC2119). -->
-<!-- I don't think we need RFC2119 language in this document. -->
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+"SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+document are to be interpreted as described
+in [RFC 2119](#RFC2119).
 
-Terminology defined in {{RFC7228}} applies to this document.
+Terminology defined in {{RFC7228}} applies to this document
 
 
 # Management in IoT Terminology in IETF related work
@@ -96,47 +85,51 @@ TBD.
 
 # Management in IoT Terminology
 
-The terminology can be organized in the zones depicted in {{fig_DevMgtDescrp}}.
+The terminology can be organized in these zones.
+
+
 
 ~~~~
-     ------------------------------------------------------------+
-                                                                 |
-       +-------------------------------------------+             |
-       |                                           |             |
-       |                                           |             |
-       |                                     GwM   |             |
-       |     +---------------------------+         |             |
-       |     |                           |         |             |
-       |     |   +-------------+   RtM   |         |             |
-       |     |   |             |         |         |             |
-       |     |   |   DM        |         |         |             |
-       |     |   |             |         |         |             |
-+-----------------------------------------------------------+    |
-|      |     |   |             |         |         |        |    |RM
-|      |     |   +-------------+         |         |        |    |
-|      |     |                           |         |        |    |
-|      |     |                           |         |        |    |
-|      |     +---------------------------+         |        |    |
-|      |                                           |        |    |
-|      |                                           |        |    |
-|      +-------------------------------------------+        |    |
-|                                                           |    |
-|                                                           |    |
-|                                                           |    |
-|                                                      NM   |    |
-|                                                           |    |
-|                                                           |    |
-+-----------------------------------------------------------+    |
-                                                                 |
-     ------------------------------------------------------------+
+         -------------------------------------------------------------------+
+                                                                            |
+           +------------------------------------------------+               |
+           |                                                |               |
+           |                                                |               |
+           |                                       GwM      |               |
+           |     +-----------------------------+            |               |
+           |     |                             |            |               |
+           |     |   +---------------+   RtM   |            |               |
+           |     |   |               |         |            |               |
+           |     |   |   DM          |         |            |               |
+           |     |   |               |         |            |               |
++----------------------------------------------------------------------+    |
+|          |     |   |               |         |            |          |    |RM
+|          |     |   +---------------+         |            |          |    |
+|          |     |                             |            |          |    |
+|          |     |                             |            |          |    |
+|          |     +-----------------------------+            |          |    |
+|          |                                                |          |    |
+|          |                                                |          |    |
+|          +------------------------------------------------+          |    |
+|                                                                      |    |
+|                                                                      |    |
+|                                                                      |    |
+|                                                                 NM   |    |
+|                                                                      |    |
+|                                                                      |    |
++----------------------------------------------------------------------+    |
+                                                                            |
+         -------------------------------------------------------------------+
+
 ~~~~
 {: #fig_DevMgtDescrp title='Management in constrained environments.'}
 
-Device Management (DM): It involves the management of the device
-itself e.g. firmware update functionalities.
 
-Following OMA Standard {{OMA-DM}}, Device Management is the procedure
-that involves the configuration of a device and maintenance tasks such as software updates.
+Device Management (DM): It involves the management of the device
+itself e.g. firmware update functionalities
+
+Following OMA Standard {{OMA-DM}} device Management is the procedure that involves the configuration of a device
+and maintenance tasks such as software updates .
 
 Resource Management (RM): It involves the management of the resources of
 a device or network?. Or should RM involve only resources of DM and not resources
@@ -148,18 +141,17 @@ of a device.
 Gateway Management (GwM): It involves the management of the functionalities
 of devices to forward the information outside of the network or to Internet.
 
-Network Management (GwM): It involves the management of the Network.
-See {{RFC6632}} for an overview.
+Network Management (GwM): It involves the management of the Network. It is
+defined in RFC [TODO].
 
-{{fig_DevMgtDescrp}} shows that some Device Management Functionalities would be part
+Figure 1 shows that some Device Management Functionalities would be part
 of Network Management? Such as configuration of network interface?
-
 TODO Add further explanation of the figure.
 
 
 # Device Management
 
-Following OMA Specifications {{OMA-DM}}, device management comprises management of a device configuration
+Following OMA Specifications{{OMA-DM}}, device management comprises management of a device configuration
 and other managed objects of devices from the point of view of the management
 authorities such
 as a network operator or a hardware device.
@@ -172,7 +164,7 @@ such as firmware update and check the battery levels. Including, s
 setting initial configuration information in devices,
 subsequent installation and updates of persistent information in devices,
 retrieval of management information from devices,
-processing events and alarms generated by devices {{OMA-DM}}.
+processing events and alarms generated by devices.{{OMA-DM}}
 
 TODO Add other functionalities - FCAPS? - OAM?
 
@@ -212,14 +204,14 @@ There are no IANA considerations related to this document.
 
 TBD
 
---- back
-
 
 # Acknowledgments {#Acknowledgments}
-{: numbered="no"}
 
 This work is partially funded by the FP7 Marie Curie Initial Training
 Network (ITN) METRICS project (grant agreement No.  607728).
 
 The authors would like to acknowledge the review, feedback, and
 comments of TBD.
+
+
+--- back
