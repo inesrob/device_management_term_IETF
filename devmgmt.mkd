@@ -98,8 +98,6 @@ TBD.
 
 The terminology can be organized in the zones depicted in {{fig_DevMgtDescrp}}.
 
-
-
 ~~~~
      ------------------------------------------------------------+
                                                                  |
@@ -206,6 +204,7 @@ NM? |                |                          |
 ~~~~
 {: #fig_ExampleDevMgtDescrp title='Example of areas of Management in RPL-network.'}
 
+
 # Device Management
 
 Following OMA Specifications {{OMA-DM}}, device management comprises management of a device configuration
@@ -272,6 +271,3 @@ Network (ITN) METRICS project (grant agreement No.  607728).
 
 The authors would like to acknowledge the review, feedback, and
 comments of TBD.
-
-
---- back
