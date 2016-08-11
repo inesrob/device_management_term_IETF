@@ -1,0 +1,217 @@
+---
+stand_alone: true
+ipr: trust200902
+docname: draft-robles-core-devmgmtterm-00
+cat: info
+pi:
+  strict: 'no'
+  toc: 'yes'
+  tocdepth: '4'
+  symrefs: 'yes'
+  sortrefs: 'yes'
+  compact: 'yes'
+  subcompact: 'no'
+title: Device Management Terminology for constrained environments
+abbrev: DevMgmtTerm
+area: Internet
+wg: CORE Working Group
+kw: Device Management
+date: 2016
+author:
+- ins: I. R. Robles
+  name: Maria Ines Robles
+  org: Ericsson
+  abbrev: Ericsson
+  street: Hirsalantie 11
+  city: Jorvas
+  code: '02420'
+  country: Finland
+  email: maria.ines.robles@ericsson.com
+- ins: M. E. Ersue
+  name: Mehmet
+  org: Nokia Networks
+  abbrev: Nokia
+  email: mehmet.ersue@nokia.com
+- ins: C. B. Carsten
+  name: Bormann
+  org: Universitaet Bremen TZI
+  abbrev: TZI
+  email: cabo@tzi.org
+normative:
+  RFC2119:
+informative:
+  RFC7228:
+  RFC7547:
+  RFC7548:
+  OMA-DM:
+    target: http://technical.openmobilealliance.org/Technical/technical-information/release-program/current-releases/oma-device-management-v2-0
+    title: OMA Device Management Protocol
+    author:
+    - org: ''
+    date: false
+
+--- abstract
+
+
+This document intends to clarify the terminology related to the management
+in constrained environments.
+
+--- middle
+
+# Introduction
+
+This document tries to define the main aspects related to management of constrained
+nodes/devices.
+
+ {{RFC7547}} describes the problem statements and requirements in the management of Networks
+with constrained devices. {{RFC7548}} describes the use cases involving the management of networks in which constrained
+devices are involved.
+
+
+# Terminology and Requirements Language
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+"SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+document are to be interpreted as described
+in [RFC 2119](#RFC2119).
+
+Terminology defined in {{RFC7228}} applies to this document
+
+
+# Management in IoT Terminology in IETF related work
+
+TBD.
+
+
+# Management in IoT Terminology
+
+The terminology can be organized in these zones.
+
+
+
+~~~~
+         -------------------------------------------------------------------+
+                                                                            |
+           +------------------------------------------------+               |
+           |                                                |               |
+           |                                                |               |
+           |                                       GwM      |               |
+           |     +-----------------------------+            |               |
+           |     |                             |            |               |
+           |     |   +---------------+   RtM   |            |               |
+           |     |   |               |         |            |               |
+           |     |   |   DM          |         |            |               |
+           |     |   |               |         |            |               |
++----------------------------------------------------------------------+    |
+|          |     |   |               |         |            |          |    |RM
+|          |     |   +---------------+         |            |          |    |
+|          |     |                             |            |          |    |
+|          |     |                             |            |          |    |
+|          |     +-----------------------------+            |          |    |
+|          |                                                |          |    |
+|          |                                                |          |    |
+|          +------------------------------------------------+          |    |
+|                                                                      |    |
+|                                                                      |    |
+|                                                                      |    |
+|                                                                 NM   |    |
+|                                                                      |    |
+|                                                                      |    |
++----------------------------------------------------------------------+    |
+                                                                            |
+         -------------------------------------------------------------------+
+
+~~~~
+{: #fig_DevMgtDescrp title='Management in constrained environments.'}
+
+
+Device Management (DM): It involves the management of the device
+itself e.g. firmware update functionalities
+
+Following OMA Standard {{OMA-DM}} device Management is the procedure that involves the configuration of a device
+and maintenance tasks such as software updates .
+
+Resource Management (RM): It involves the management of the resources of
+a device or network?. Or should RM involve only resources of DM and not resources
+of NM?
+
+Routing Management (RtM): It involves the management of the forwarding functionalities
+of a device.
+
+Gateway Management (GwM): It involves the management of the functionalities
+of devices to forward the information outside of the network or to Internet.
+
+Network Management (GwM): It involves the management of the Network. It is
+defined in RFC [TODO].
+
+Figure 1 shows that some Device Management Functionalities would be part
+of Network Management? Such as configuration of network interface?
+TODO Add further explanation of the figure.
+
+
+# Device Management
+
+Following OMA Specifications{{OMA-DM}}, device management comprises management of a device configuration
+and other managed objects of devices from the point of view of the management
+authorities such
+as a network operator or a hardware device.
+
+## Device Management FCAPS - OAM?
+
+Device management is related to define the functionalities to handle the
+devices basically in control plane,
+such as firmware update and check the battery levels. Including, s
+setting initial configuration information in devices,
+subsequent installation and updates of persistent information in devices,
+retrieval of management information from devices,
+processing events and alarms generated by devices.{{OMA-DM}}
+
+TODO Add other functionalities - FCAPS? - OAM?
+
+
+
+# Resource Management
+
+TODO
+
+
+# Routing Management
+
+TODO
+
+
+# Gateway Management
+
+TODO
+
+
+# Network Management
+
+TODO
+
+
+# IoT Lifecycle Management Terminology
+
+Should we include the definition of each stage in the lifecycle is as well?
+
+
+# IANA Considerations
+
+There are no IANA considerations related to this document.
+
+
+# Security Considerations {#Security}
+
+TBD
+
+
+# Acknowledgments {#Acknowledgments}
+
+This work is partially funded by the FP7 Marie Curie Initial Training
+Network (ITN) METRICS project (grant agreement No.  607728).
+
+The authors would like to acknowledge the review, feedback, and
+comments of TBD.
+
+
+--- back
